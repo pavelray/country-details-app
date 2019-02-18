@@ -1,0 +1,29 @@
+<div class="d-flex align-items-center p-3 my-3 rounded shadow-sm">
+  <img class="mr-3" src={{country?.flag}} alt="" width="48" height="48">
+  <div class="lh-100">
+    <h6 class="mb-0 lh-100">{{country?.name}}</h6>
+    <small>{{country?.demonym}}</small>
+  </div>
+</div>
+
+<div class="my-3 p-3 bg-white rounded shadow-sm col-md-12">
+  <h6 class="border-bottom border-gray pb-2 mb-0">Details</h6>
+  <div class="row">
+    <div class="col-md-4">
+      <h6>Native Name</h6>
+      <p>{{country?.nativeName}}</p>
+    </div>
+    <div class="col-md-4">
+      <h6>Capital</h6>
+      <p>{{country?.nativeName}}</p>
+    </div>
+    <div class="col-md-4">
+      <h6>Heading</h6>
+      <p>{{country?.nativeName}}</p>
+    </div>
+  </div>
+</div>
+
+<p>
+  {{country|json}}
+</p>

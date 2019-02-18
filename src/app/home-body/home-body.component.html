@@ -1,0 +1,14 @@
+<div class="row text-center">
+  <div class="col-lg-3 col-md-6 mb-4" *ngFor='let country of countries'>
+    <div class="card h-100">
+      <img class="card-img-top" src={{country.flag}} alt="">
+      <div class="card-body">
+        <h4 class="card-title">{{country.name}}</h4>
+        <p class="card-text">{{country.capital}}</p>
+      </div>
+      <div class="card-footer">
+        <a [routerLink]="['/country', country.alpha3Code]" class="btn btn-primary">Find Out More!</a>
+      </div>
+    </div>
+  </div>
+</div>
