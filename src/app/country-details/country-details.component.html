@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center p-3 my-3 rounded shadow-sm">
+<div class="d-flex align-items-center p-3 my-3 rounded shadow-sm header-background text-white">
   <img class="mr-3" src={{country?.flag}} alt="" width="48" height="48">
   <div class="lh-100">
     <h6 class="mb-0 lh-100">{{country?.name}}</h6>
@@ -6,24 +6,67 @@
   </div>
 </div>
 
-<div class="my-3 p-3 bg-white rounded shadow-sm col-md-12">
-  <h6 class="border-bottom border-gray pb-2 mb-0">Details</h6>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+  <h4 class="border-bottom border-gray pb-2 mb-0">Details</h4>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
+      <h6>Capital</h6>
+      <p>{{country?.capital}}</p>
+    </div>
+    <div class="col-md-3">
       <h6>Native Name</h6>
       <p>{{country?.nativeName}}</p>
     </div>
-    <div class="col-md-4">
-      <h6>Capital</h6>
-      <p>{{country?.nativeName}}</p>
+    <div class="col-md-3">
+      <h6>Calling Code</h6>
+      <p>{{country?.callingCodes}}</p>
     </div>
-    <div class="col-md-4">
-      <h6>Heading</h6>
-      <p>{{country?.nativeName}}</p>
+    <div class="col-md-3">
+      <h6>Population</h6>
+      <p>{{country?.population|number}}</p>
     </div>
+  </div>
+  <h4 class="border-bottom border-gray pb-2 mb-0">Geography</h4>
+  <div class="row">
+    <div class="col-md-3">
+      <h6>Region</h6>
+      <p>{{country?.region}}</p>
+    </div>
+    <div class="col-md-3">
+      <h6>Sub Region</h6>
+      <p>{{country?.subregion}}</p>
+    </div>
+    <div class="col-md-3">
+      <h6>Area</h6>
+      <p>{{country?.area | number}} km2</p>
+    </div>
+    <div class="col-md-3">
+      <h6>Lat Long</h6>
+      <p>{{country?.latlng}}</p>
+    </div>
+    <div class="col-md-3">
+      <h6>Borders</h6>
+      <p><span *ngFor='let b of country?.borders'><a [routerLink]="['/country', b]">{{b}}</a>&nbsp;</span></p>
+    </div>
+  </div>
+  <h4 class="border-bottom border-gray pb-2 mb-0">Currency</h4>
+  <div class="row" *ngFor='let c of country?.currencies'>
+    <div class="col-md-3">
+      <h6>Name</h6>
+      <p>{{c.name}}</p>
+    </div>
+    <div class="col-md-3">
+      <h6>Symbol</h6>
+      <p>{{c.symbol}}</p>
+    </div>
+    <div class="col-md-3" >
+        <h6>Code</h6>
+        <p>{{c.code}}</p>
+      </div>
   </div>
 </div>
 
-<p>
+<!--<p>
   {{country|json}}
 </p>
+-->
