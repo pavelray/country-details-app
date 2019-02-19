@@ -8,7 +8,7 @@ import { Http } from '@angular/http';
 export class CountryService extends DataService {
 
   constructor(http: Http) {
-    super('http://restcountries.eu/rest/v2/all',http)
+    super('https://restcountries.eu/rest/v2/all',http)
   }
 
   getCountry(url: string){
