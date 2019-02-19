@@ -7,9 +7,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class DataService {
 
   constructor(private url: string , private http : Http) { }
